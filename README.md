@@ -19,6 +19,6 @@ We call the underlying idea **meaning-maxxing** — building AI that maximizes m
 ## This repo
 
 - [`WHITEPAPER.md`](./WHITEPAPER.md) — the architecture and research grounding, v0.1
-- [`site/`](./site/) — mula.co, a single static page
+- [`index.html`](./index.html) — the site (live at https://withdhyan.github.io/mula/ for now; mula.co later)
 
 Status: pre-launch. Waitlist at **mula.co**. Built by [Holon Research](https://holonresear.ch).
