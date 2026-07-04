@@ -40,6 +40,15 @@
   .research a { color: var(--accent-ink); text-decoration-thickness: 1px; text-underline-offset: 3px; }
   .research .note { color: var(--muted); }
   .hash { font-family: ui-monospace, Menlo, monospace; font-size: 0.85em; background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: 0.05rem 0.35rem; }
+  .sys { overflow-x: auto; }
+  .sysrow { display: flex; align-items: stretch; gap: 0.6rem; min-width: 34rem; }
+  .sysbox { flex: 1; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 0.8rem 0.9rem; font-size: 0.92rem; }
+  .sysbox small { display: block; color: var(--muted); margin-top: 0.3rem; line-height: 1.45; }
+  .sysarrow { align-self: center; color: var(--muted); font-size: 0.78rem; white-space: nowrap; font-family: ui-monospace, Menlo, monospace; }
+  .sysnone { margin-top: 0.7rem; font-size: 0.88rem; color: var(--muted); font-style: italic; }
+  .ladder { margin: 0; padding: 0; list-style: none; display: grid; gap: 0.6rem; font-size: 0.95rem; }
+  .ladder li { padding-left: 1.1rem; border-left: 3px solid var(--line); }
+  .ladder li:first-child { border-left-color: var(--accent); }
   .cardpeek {
     margin: 3rem 0 0; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 1.4rem 1.5rem;
   }
@@ -83,6 +92,28 @@
       <li>🔬 Built on published research — the <a href="https://meaningalignment.org" rel="noopener">Meaning Alignment Institute's</a> Moral Graph Elicitation method, and the <a href="https://arxiv.org/abs/2512.03399" rel="noopener">Full-Stack Alignment</a> agenda, applied in the field.</li>
       <li>🌱 <a href="https://github.com/withdhyan/mula" rel="noopener">Open repo</a> — the company builds in public, including the agent stack that runs it.</li>
       <li>✉️ One sealed envelope: where this goes next is pre-registered — hypothesis, methods, kill criteria — hash-stamped <span class="hash">ddbe9cd</span> before we started. Results published pass or fail.</li>
+    </ul>
+  </div>
+
+  <div class="research" id="system">
+    <h2>Where your data actually lives</h2>
+    <div class="sys">
+      <div class="sysrow">
+        <div class="sysbox">🧍 <b>You</b><small>your words, your yes/no on every card</small></div>
+        <div class="sysarrow">→ TLS →</div>
+        <div class="sysbox">🔐 <b>Your wallet</b><small>card content stored as <em>ciphertext</em> — unreadable even to us. Export or erase everything, one tap.</small></div>
+        <div class="sysarrow">→ zero-retention lane →</div>
+        <div class="sysbox">🤖 <b>The interviewer</b><small>model endpoints with zero data retention; nothing card-shaped in any log</small></div>
+      </div>
+      <div class="sysnone">Not in this picture, by design: advertisers · analytics on card content · a token · anyone else.</div>
+    </div>
+    <h2 style="margin-top:1.6rem">The sovereignty ladder</h2>
+    <p class="note" style="font-size:0.95rem; margin:0 0 0.9rem">Our rule: decentralization arrives exactly where trust exits — and not a step before. Shipping trustworthy beats shipping trustless vaporware.</p>
+    <ul class="ladder">
+      <li><b>Now — you are here.</b> One operator, real receipts: field-level encryption, one-tap export &amp; erase, consent in four separate logged layers.</li>
+      <li><b>Next: your keys.</b> Cards signed on your device — unforgeable, portable, provable anywhere. The wallet stops being a row in anyone's database.</li>
+      <li><b>Then: private discovery.</b> Two wallets find common ground without either revealing its contents — private set intersection, selective disclosure, math instead of a middleman.</li>
+      <li><b>Eventually: no operator at all.</b> Federation with a public anchor for identity and revocation only. No content on any chain, ever.</li>
     </ul>
   </div>
 
