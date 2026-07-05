@@ -10,11 +10,9 @@ A value card is short, specific, and arguable — not a horoscope:
 
 You endorse, edit, or toss every card. Tossed means deleted — actually deleted.
 
-## Use it — two ways, pick one
+## Use it (requires an AI agent — that's the point)
 
-### 1. In your own agent (available now, fully local)
-
-If you run an AI agent that supports skills (Claude Code and compatible harnesses), the entire wallet runs on your machine — cards as markdown in your own repo, nothing leaves your device, no account, no server, no us.
+Mūla runs inside your own agent (Claude Code and compatible harnesses), on your own machine — cards as markdown in your own repo, nothing leaves your device, no account, no server, no us. **We don't have servers.** If you don't run an agent yet, that's the prerequisite — not a limitation we apologize for, but the architecture the promise requires.
 
 ```bash
 mkdir -p ~/.claude/skills/mula
@@ -22,11 +20,7 @@ curl -o ~/.claude/skills/mula/SKILL.md \
   https://raw.githubusercontent.com/withdhyan/mula/main/skill/SKILL.md
 ```
 
-Then say `/mula` to your agent. Two or three 15-minute interviews produce your first endorsed cards. The skill's rules — per-card endorsement, hard deletion, privacy as an absolute — are in [`skill/SKILL.md`](./skill/SKILL.md).
-
-### 2. The hosted wallet (waitlist)
-
-For everyone who doesn't live in a terminal: the same interview and wallet as a website — cards encrypted at field level (ciphertext even to us), export or delete everything in one tap, consent in four separate logged layers. Waitlist at **[withdhyan.github.io/mula](https://withdhyan.github.io/mula/)** (mula.co soon).
+Then say `/mula` to your agent. Two or three 15-minute interviews produce your first endorsed cards. The skill's rules — per-card endorsement, hard deletion, privacy as an absolute — are in [`skill/SKILL.md`](./skill/SKILL.md). Updates: leave an email at [the site](https://withdhyan.github.io/mula/).
 
 ## How it works
 

@@ -65,11 +65,19 @@
 
   <h1>Your values, on your side.</h1>
 
-  <p class="sub">Every app profiles you for someone else — the feed, the advertiser, the algorithm. <strong>Mūla is an AI that learns what you actually value</strong>, writes it into cards you keep, and works for no one but you.</p>
+  <p class="sub">Every app profiles you for someone else — the feed, the advertiser, the algorithm. <strong>Mūla is an AI that learns what you actually value</strong>, writes it into cards you keep, and works for no one but you. It runs inside your own AI agent, on your own machine. <strong>There is no server.</strong></p>
 
-  <form action="#" method="post" data-todo="wire to waitlist endpoint before deploy">
+  <div class="cardpeek" style="margin:0 0 1rem">
+    <div class="k">install — requires an AI agent (Claude Code or compatible)</div>
+    <pre style="margin:0.5rem 0 0; overflow-x:auto; font-size:0.85rem; line-height:1.5"><code>mkdir -p ~/.claude/skills/mula
+curl -o ~/.claude/skills/mula/SKILL.md \
+  https://raw.githubusercontent.com/withdhyan/mula/main/skill/SKILL.md</code></pre>
+    <p style="margin:0.6rem 0 0; font-style:normal; font-size:0.9rem">Then tell your agent: <b>/mula</b>. Your first cards in fifteen minutes.</p>
+  </div>
+
+  <form action="#" method="post" data-todo="wire to updates endpoint">
     <input type="email" name="email" required placeholder="you@example.com" aria-label="Email address">
-    <button type="submit">Join the waitlist</button>
+    <button type="submit">Get updates</button>
   </form>
 
   <div class="cardpeek">
@@ -101,20 +109,20 @@
     <div class="sys">
       <div class="sysrow">
         <div class="sysbox">🧍 <b>You</b><small>your words, your yes/no on every card</small></div>
-        <div class="sysarrow">→ TLS →</div>
-        <div class="sysbox">🔐 <b>Your wallet</b><small>card content stored as <em>ciphertext</em> — unreadable even to us. Export or erase everything, one tap.</small></div>
-        <div class="sysarrow">→ zero-retention lane →</div>
-        <div class="sysbox">🤖 <b>The interviewer</b><small>model endpoints with zero data retention; nothing card-shaped in any log</small></div>
+        <div class="sysarrow">↔ same machine ↔</div>
+        <div class="sysbox">🔐 <b>Your wallet</b><small>markdown files in your own repo, on your own disk. Grep them. Version them. Burn them.</small></div>
+        <div class="sysarrow">→ interview only →</div>
+        <div class="sysbox">🤖 <b>The interviewer</b><small>your own agent's model, under your own key and settings</small></div>
       </div>
-      <div class="sysnone">Not in this picture, by design: advertisers · analytics on card content · a token · anyone else.</div>
+      <div class="sysnone">Not in this picture: our servers — <b>we don't have any</b>. Also absent: advertisers, analytics, a token, anyone else.</div>
     </div>
     <h2 style="margin-top:1.6rem">The sovereignty ladder</h2>
-    <p class="note" style="font-size:0.95rem; margin:0 0 0.9rem">Our rule: decentralization arrives exactly where trust exits — and not a step before. Shipping trustworthy beats shipping trustless vaporware.</p>
+    <p class="note" style="font-size:0.95rem; margin:0 0 0.9rem">Our rule: decentralization arrives exactly where trust exits — and not a step before.</p>
     <ul class="ladder">
-      <li><b>Now — you are here.</b> One operator, real receipts: field-level encryption, one-tap export &amp; erase, consent in four separate logged layers.</li>
-      <li><b>Next: your keys.</b> Cards signed on your device — unforgeable, portable, provable anywhere. The wallet stops being a row in anyone's database.</li>
-      <li><b>Then: private discovery.</b> Two wallets find common ground without either revealing its contents — private set intersection, selective disclosure, math instead of a middleman.</li>
-      <li><b>Eventually: no operator at all.</b> Federation with a public anchor for identity and revocation only. No content on any chain, ever.</li>
+      <li><b>Now — you are here, and it's further up than most products ever get.</b> Cards on your device, in plain files you own. Nothing to export because nothing ever left.</li>
+      <li><b>Next: your keys.</b> Cards signed on your device — unforgeable, portable, provable anywhere without showing the rest.</li>
+      <li><b>Then: private discovery.</b> Two wallets find common ground without either revealing its contents — math instead of a middleman.</li>
+      <li><b>Eventually: no operator anywhere.</b> A public anchor for identity and revocation only. No content on any chain, ever.</li>
     </ul>
   </div>
 
