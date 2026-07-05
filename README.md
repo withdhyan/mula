@@ -19,6 +19,7 @@ We call the underlying idea **meaning-maxxing** — building AI that maximizes m
 ## This repo
 
 - [`WHITEPAPER.md`](./WHITEPAPER.md) — the architecture and research grounding, v0.1
+- [`skill/`](./skill/) — **the Mūla agent skill**: run the wallet entirely on your own machine, in your own agent — cards as markdown, nothing leaves your device
 - [`index.html`](./index.html) — the site (live at https://withdhyan.github.io/mula/ for now; mula.co later)
 
 Status: pre-launch. Waitlist at **mula.co**. Built by [Holon Research](https://holonresear.ch).
